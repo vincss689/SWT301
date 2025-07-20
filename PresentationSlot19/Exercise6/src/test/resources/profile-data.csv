@@ -1,0 +1,6 @@
+name,email,phone,avatarPath
+Alice,alice@example.com,0123456789,src/test/resources/image.png
+Bob,bob@example.com,0987654321,src/test/resources/image.png
+Charlie,charlie@example.com,0111222333,
+David,david@example.com,0999888777,src/test/resources/image.png
+"","","", 
