@@ -10,11 +10,11 @@ public class ProductPage extends BasePage {
     private By nameField = By.id("productName");
     private By priceField = By.id("productPrice");
     private By descField = By.id("productDesc");
-    private By imageUpload = By.id("productImage");
-    private By saveButton = By.id("saveProduct");
+    private By imageUpload = By.id("imageFile");
+    private By saveButton = By.cssSelector("button[type='submit']");
     private By productList = By.cssSelector(".product-list");
-    private By successMsg = By.cssSelector(".alert-success");
-    private By errorMsg = By.cssSelector(".alert-danger");
+    private By successMsg = By.cssSelector(".alert-info");
+    private By errorMsg = By.cssSelector(".alert-info");
 
     public void navigate() {
         navigateTo("http://localhost:8080/products");
@@ -26,7 +26,8 @@ public class ProductPage extends BasePage {
         type(priceField, price);
         type(descField, desc);
         if (imagePath != null && !imagePath.isEmpty()) {
-            driver.findElement(imageUpload).sendKeys(imagePath);
+            String absPath = new java.io.File(imagePath).getAbsolutePath();
+            driver.findElement(imageUpload).sendKeys(absPath);
         }
         click(saveButton);
     }

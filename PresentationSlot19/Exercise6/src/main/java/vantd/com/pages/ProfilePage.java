@@ -9,10 +9,10 @@ public class ProfilePage extends BasePage {
     private By nameField = By.id("name");
     private By emailField = By.id("email");
     private By phoneField = By.id("phone");
-    private By avatarUpload = By.id("avatar");
-    private By saveButton = By.id("saveProfile");
-    private By successMsg = By.cssSelector(".alert-success");
-    private By errorMsg = By.cssSelector(".alert-danger");
+    private By avatarUpload = By.id("avatarFile");
+    private By saveButton = By.cssSelector("button[type='submit']");
+    private By successMsg = By.cssSelector(".alert-info");
+    private By errorMsg = By.cssSelector(".alert-info");
 
     public void navigate() {
         navigateTo("http://localhost:8080/profile");
@@ -23,7 +23,8 @@ public class ProfilePage extends BasePage {
         type(emailField, email);
         type(phoneField, phone);
         if (avatarPath != null && !avatarPath.isEmpty()) {
-            driver.findElement(avatarUpload).sendKeys(avatarPath);
+            String absPath = new java.io.File(avatarPath).getAbsolutePath();
+            driver.findElement(avatarUpload).sendKeys(absPath);
         }
         click(saveButton);
     }

@@ -1,9 +1,4 @@
 firstName,lastName,email,gender,mobile,dob,subject,hobby,address,state,city,expectedName,image
 John,Doe,john.doe@example.com,Male,0987654321,"10 May 1990",Maths,Sports,"123 Main St, City",NCR,Delhi,"John Doe",image.png
 Jane,Smith,jane.smith@example.com,Female,0912345678,"15 Jun 1995",English,Reading,"456 Another St, Town",Uttar Pradesh,Agra,"Jane Smith",image.png
-Anna,Lee,anna.lee@,Female,0888888888,"20 Dec 1992",Chemistry,Sports,"12 Lake Rd, City",Haryana,Karnal,"Anna Lee",image.png
-Bob,Nguyen,bob.nguyen@example.com,Male,abc,"05 Feb 1985",Maths,Reading,"No Last Name",NCR,Noida,"Bob Nguyen",image.png
 Tom,Tran,tom.tran@example.com,Male,0999999999,"32 Feb 2000",Physics,Music,"789 Street, City",NCR,Gurgaon,"Tom Tran",image.png
-Linh,Pham,linh.pham@example.com,Female,0901234567,"11 Nov 1998",Biology,,"22 Flower St, City",Uttar Pradesh,Lucknow,"Linh Pham",image.png
-Minh,Hoang,minh.hoang@example.com,Male,0934567890,"23 Mar 1995",,Reading,"88 River Rd, Town",Haryana,Panipat,"Minh Hoang",image.png
-,,invalid.email@,Male,123,"01 Jan 2000",Maths,Sports,"",NCR,Delhi,"No Name",image.png
